@@ -1,0 +1,36 @@
+{
+    "mappings": {
+        "dynamic": false,
+        "fields": {
+            "contactMethods": {
+                "fields": {
+                    "value": {
+                        "analyzer": "regReplace",
+                        "type": "string"
+                    }
+                },
+                "type": "document"
+            }
+        }
+    },
+    "analyzers": [
+        {
+            "charFilters": [],
+            "name": "regReplace",
+            "tokenFilters": [
+                {
+                    "type": "lowercase"
+                },
+                {
+                    "matches": "all",
+                    "pattern": "@.+$",
+                    "replacement": "",
+                    "type": "regex"
+                }
+            ],
+            "tokenizer": {
+                "type": "keyword"
+            }
+        }
+    ]
+}
