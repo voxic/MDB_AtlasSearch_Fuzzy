@@ -6,6 +6,12 @@
                 "fields": {
                     "value": {
                         "analyzer": "regReplace",
+                        "multi": {
+                            "keywordAnalyzer": {
+                                "analyzer": "lucene.keyword",
+                                "type": "string"
+                            }
+                        },
                         "type": "string"
                     }
                 },
@@ -23,8 +29,8 @@
                 },
                 {
                     "matches": "all",
-                    "pattern": "@.+$",
-                    "replacement": "",
+                    "pattern": "[^0-9]?",
+                    "replacement": "-",
                     "type": "regex"
                 }
             ],
