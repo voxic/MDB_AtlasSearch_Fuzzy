@@ -14,7 +14,7 @@ This is an example of a MongoDB aggregation pipeline that demonstrates how to pe
               query: "anneli.al.larsson63885@mendoza-dickson.net",
               path: {
                 value: "contactMethods.value",
-                multi: "keywordanalyzer",
+                multi: "keywordAnalyzer",
               },
               fuzzy: {
                 maxEdits: 2,
@@ -162,7 +162,7 @@ This documentation describes an aggregation pipeline with multiple stages to per
         - `query`: Specifies the search query string.
         - `path`: Specifies the field to search within.
           - `value`: Specifies the path to the `contactMethods.value` field.
-          - `multi`: Specifies the analyzer to use for the field (in this case, "keywordanalyzer").
+          - `multi`: Specifies the analyzer to use for the field (in this case, "keywordAnalyzer").
         - `fuzzy`: Specifies fuzzy matching options.
           - `maxEdits`: Specifies the maximum number of edits allowed for fuzzy matching.
   - `highlight`: Specifies the field to highlight in the search results.
