@@ -6,20 +6,32 @@
         must: [
           {
             text: {
-              query: "anneli.al.larsson63885@mendoza-dickson.net",
+              query: "ingridkarlsson79050@gordon.com",
               path: {
                 value: "contactMethods.value",
                 multi: "keywordAnalyzer",
               },
               fuzzy: {
-                maxEdits: 2,
+                maxEdits: 1,
               },
+            },
+          },
+        ],
+        should: [
+          {
+            text: {
+              query: "ingridkarlsson79050@gordon.com",
+              path: "contactMethods.value",
+              score: { boost: { value: 1.1 } },
             },
           },
           {
             text: {
-              query: "anneli.al.larsson63885@mendoza-dickson.net",
-              path: "contactMethods.value",
+              query: "ingridkarlsson79050@gordon.com",
+              path: {
+                value: "contactMethods.value",
+                multi: "keywordAnalyzer",
+              },
             },
           },
         ],
