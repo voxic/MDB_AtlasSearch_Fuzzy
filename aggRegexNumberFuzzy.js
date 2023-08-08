@@ -37,7 +37,10 @@
         ],
       },
       highlight: {
-        path: "contactMethods.value",
+        path: {
+          value: "contactMethods.value",
+          multi: "keywordAnalyzer",
+        },
       },
     },
   },
